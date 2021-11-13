@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Python Documentation</header>
+      <ul>
+        <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+        <li><a href="#Python-syntax" class="nav-link">Python Syntax</a></li>
+        <li>
+          <a href="#Python-indentation" class="nav-link">Python Indentation</a>
+        </li>
+        <li><a href="#Python-comments" class="nav-link">Python Comments</a></li>
+        <li>
+          <a href="#Python-variables" class="nav-link">Python Variables</a>
+        </li>
+        <li>
+          <a href="#Python-data-types" class="nav-link">Python Data Types</a>
+        </li>
+        <li><a href="#Reference" class="nav-link">Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>
+            Python is a popular programming language. It was created by Guido
+            van Rossum, and released in 1991.
+          </p>
+          <p>it is used for:</p>
+          <li>web development (server-side),</li>
+          <li>software development,</li>
+          <li>mathematics,</li>
+          <li>system scripting.</li>
+          <p>Python compared to other programming languages.</p>
+          <p>
+            Python was designed for readability, and has some similarities to
+            the English language with influence from mathematics. It uses new
+            lines to complete a command, as opposed to other programming
+            languages which often use semicolons or parentheses. Python relies
+            on indentation, using whitespace, to define scope; such as the scope
+            of loops, functions and classes. Other programming languages often
+            use curly-brackets for this purpose.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Python-syntax">
+        <header>Python Syntax</header>
+        <article>
+          <p>
+            Python syntax can be executed by writing directly in the Command
+            Line:
+          </p>
+          <code> print("Hello, World!") </code>
+          <p>
+            Or by creating a python file on the server, using the .py file
+            extension, and running it in the Command Line:
+          </p>
+          <code> C:\Users\Your Name>python myfile.py </code>
+        </article>
+      </section>
+      <section class="main-section" id="Python-indentation">
+        <header>Python Indentation</header>
+        <article>
+          <p>
+            Indentation refers to the spaces at the beginning of a code line.
+            Where in other programming languages the indentation in code is for
+            readability only, the indentation in Python is very important.
+            Python uses indentation to indicate a block of code.
+          </p>
+          <code
+            >if 5 > 2:
+            <div class="indent">print("Five is greater than two!")</div></code
+          >
+          <p>Python will give you an error if you skip the indentation:</p>
+          <p>Syntax Error:</p>
+          <code>if 5 > 2: print("Five is greater than two!")</code>
+          <p>
+            The number of spaces is up to you as a programmer, but it has to be
+            at least one.
+          </p>
+          <code
+            >if 5 > 2:
+            <div class="indent">print("Five is greater than two!")</div>
+            if 5 > 2:
+            <div class="indent">
+              <div class="indent">print("Five is greater than two!")</div>
+            </div>
+          </code>
+          <p>
+            You have to use the same number of spaces in the same block of code,
+            otherwise Python will give you an error:
+          </p>
+          <p>Syntax Error:</p>
+          <code
+            >if 5 > 2:
+            <div class="indent">print("Five is greater than two!")</div>
+            <div class="indent">
+              <div class="indent">print("Five is greater than two!")</div>
+            </div></code
+          >
+        </article>
+      </section>
+      <section class="main-section" id="Python-comments">
+        <header>Python Comments</header>
+        <article>
+          <p>Comments can be used to explain Python code.</p>
+          <p>Comments can be used to make the code more readable.</p>
+          <p>Comments can be used to prevent execution when testing code.</p>
+          <p>Comments starts with a #, and Python will ignore them:</p>
+          <code>#This is a comment print("Hello, World!")</code>
+          <p>
+            Comments can be placed at the end of a line, and Python will ignore
+            the rest of the line:
+          </p>
+          <code>print("Hello, World!") #This is a comment</code>
+          <p>
+            A comment does not have to be text that explains the code, it can
+            also be used to prevent Python from executing code:
+          </p>
+          <code>#print("Hello, World!") print("Cheers, Mate!")</code>
+          <p>Python does not really have a syntax for multi line comments.</p>
+          <p>To add a multiline comment you could insert a # for each line:</p>
+          <code
+            >#This is a comment #written in #more than just one line
+            print("Hello, World!")</code
+          >
+          <p>Or, not quite as intended, you can use a multiline string.</p>
+          <p>
+            Since Python will ignore string literals that are not assigned to a
+            variable, you can add a multiline string (triple quotes) in your
+            code, and place your comment inside it:
+          </p>
+          <code
+            >""" This is a comment written in more than just one line """
+            print("Hello, World!")</code
+          >
+          <p>
+            As long as the string is not assigned to a variable, Python will
+            read the code, but then ignore it, and you have made a multiline
+            comment.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Python-variables">
+        <header>Python Variables</header>
+        <article>
+          <p>Variables are containers for storing data values.</p>
+          <p>Python has no command for declaring a variable.</p>
+          <p>
+            A variable is created the moment you first assign a value to it.
+          </p>
+          <code>x = 5 y = "John" print(x) print(y)</code>
+          <p>
+            Variables do not need to be declared with any particular type, and
+            can even change type after they have been set.
+          </p>
+          <code
+            >x = 4 # x is of type int x = "Sally" # x is now of type str
+            print(x)</code
+          >
+          <p>
+            If you want to specify the data type of a variable, this can be done
+            with casting.
+          </p>
+          <code
+            >x = str(3) # x will be '3' y = int(3) # y will be 3 z = float(3) #
+            z will be 3.0</code
+          >
+          <p>
+            You can get the data type of a variable with the type() function.
+          </p>
+          <code>x = 5 y = "John" print(type(x)) print(type(y))</code>
+          <p>
+            String variables can be declared either by using single or double
+            quotes:
+          </p>
+          <code>x = "John" # is the same as x = 'John'</code>
+          <p>Variable names are case-sensitive.</p>
+          <code>a = 4 A = "Sally" #A will not overwrite a</code>
+        </article>
+      </section>
+      <section class="main-section" id="Python-data-types">
+        <header>Python Data Types</header>
+        <article>
+          <p>In programming, data type is an important concept.</p>
+          <p>
+            Variables can store data of different types, and different types can
+            do different things.
+          </p>
+          <p>
+            Python has the following data types built-in by default, in these
+            categories:
+          </p>
+          <ul>
+            <li>Text Type: st</li>
+            <li>Numeric Types: int, float, comple</li>
+            <li>Sequence Types: list, tuple, rang</li>
+            <li>Mapping Type: dic</li>
+            <li>Set Types: set, frozense</li>
+            <li>Boolean Type: boo</li>
+            <li>Binary Types: bytes, bytearray, memoryvie</li>
+          </ul>
+          <p>
+            You can get the data type of any object by using the type()
+            function:
+          </p>
+          <p>Print the data type of the variable x:</p>
+          <code>x = 5 print(type(x))</code>
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <p>
+          All the documentation and information in this page is taken from
+          <a href="https://www.w3schools.com/python/default.asp">w3schools.</a>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
